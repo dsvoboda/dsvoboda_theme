@@ -1,7 +1,7 @@
 (function ($,sr) {
 	'use strict';
 
-	Drupal.behaviors.bridges_init = {
+	Drupal.behaviors.dsvoboda_theme_init = {
 		attach: function(context, settings) {
 			setupDOM();
 		}
@@ -93,7 +93,7 @@
 			
 			function setupServices() {
 				getObjectSpace($parent);
-				$block.find('.bridges-content').prepend($view);
+				$block.find('.dsvoboda_theme-content').prepend($view);
 				var square_side = $parent.attr('data-max-height');
 				var $services = $view.find('.node--type-service');
 				$services.each(function(a) {
@@ -184,7 +184,7 @@
 		
 		$('#block-multisitenavigation').each(function(i) {
 			var $block = $(this);
-			var $content = $block.find('.bridges-content');
+			var $content = $block.find('.dsvoboda_theme-content');
 			var site_id = $content.find('a.active').text(); 
 			var $site_tab = $('<button class="pull-tab portable" type="button">Current site: <span class="site-id">' + site_id + '</span></button>');
 			
