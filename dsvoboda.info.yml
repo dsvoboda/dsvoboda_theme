@@ -1,0 +1,22 @@
+name: 'Bridges Theme'
+description: 'Custom theme for Bridges Websites'
+type: theme
+core: 8.x
+libraries:
+  - bridges/global-css
+  - bridges/global-js
+ckeditor_stylesheets:
+  - css/styles.css
+regions:
+  page_top: 'Page Top'
+  header: 'Header'
+  info_messages: 'Messages'
+  help: 'Help'
+  content: 'Main Content'
+  footer: 'Footer'
+  page_bottom: 'Page Bottom'
+  inactive: 'Inactive'
+libraries-override:
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js

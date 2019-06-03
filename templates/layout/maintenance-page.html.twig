@@ -1,0 +1,15 @@
+<div class="layout-container">
+	{% if page.help %}
+	{{ page.help }}
+	{% endif %}
+	{% if page.info_messages %}
+	{{ page.info_messages }}
+	{% endif %}
+	<main id="main" role="main" style="text-align:center;padding:50px 0;">
+		<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+		<img src="/themes/custom/dsvoboda_theme/img/logo.png" alt="Bridges" height="" width="" style="max-width:200px;height:auto;margin:0 auto 20px;" />
+		<h2 style="margin:0 auto 20px;">Our Site is Undergoing Maintenance</h2>
+		<p>We are working as fast as we can to make this site even better. Sorry for any inconvenience.</p>
+		<p>Please check back again later. We will be restoring access to the site as soon as possible. Thank you for your patience!</p>
+	</main>
+</div>{# /.layout-container #}

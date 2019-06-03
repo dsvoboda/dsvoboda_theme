@@ -1,0 +1,9 @@
+.portable {
+	display:none;
+}
+@media only screen and (max-width:1280px) {
+	.cw {
+		width:100%;
+		padding:0 40px;
+	}
+}

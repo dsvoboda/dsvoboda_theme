@@ -1,0 +1,36 @@
+global-css:
+  version: VERSION
+  css:
+    theme:
+      css/hamburgers.min.css: { minified: true }
+      css/styles-min.css: { minified: true } 
+      css/responsive-min.css: { minified: true }
+      css/print-min.css: { media: true }
+global-js:
+  version: VERSION
+  js:
+    js/jquery.touchSwipe.min.js: { minfied: true }
+    js/init.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/modernizr
+slider:
+  version: VERSION
+  css:
+    theme:
+      css/flickity.min.css: {}
+  js:
+    js/flickity.pkgd.min.js: {}
+scrollreveal:
+  version: VERSION
+  js:
+    js/scrollreveal.js: {}
+admin:
+  version: VERSION
+  css:
+    theme:
+      css/admin-mods.css: {}
+  js:
+    js/admin-mods.js: {}
