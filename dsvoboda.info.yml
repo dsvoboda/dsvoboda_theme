@@ -1,10 +1,10 @@
-name: 'Bridges Theme'
-description: 'Custom theme for Bridges Websites'
+name: 'dsvoboda Theme'
+description: 'Custom theme for dsvoboda Websites'
 type: theme
 core: 8.x
 libraries:
-  - bridges/global-css
-  - bridges/global-js
+  - dsvoboda/global-css
+  - dsvoboda/global-js
 ckeditor_stylesheets:
   - css/styles.css
 regions:

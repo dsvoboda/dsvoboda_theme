@@ -7,7 +7,7 @@ use Drupal\block\Entity\Block;
  * Pass block region value to content so this can be used in
  * MYTHEME_theme_suggestions_menu_alter.
  */
-function bridges_preprocess_block(&$variables) {
+function dsvoboda_theme_preprocess_block(&$variables) {
 	if (isset($variables['elements']['#id'])) {
 		$region = Block::load($variables['elements']['#id'])->getRegion();
 		$variables['content']['#attributes']['region'] = $region;
@@ -19,20 +19,20 @@ function bridges_preprocess_block(&$variables) {
  *
  * Provide region based menu suggestions.
  */
-function bridges_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+function dsvoboda_theme_theme_suggestions_menu_alter(&$suggestions, array $variables) {
 	if (isset($variables['attributes']['region'])) {
 		$suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
 	}
 }
 
-function bridges_preprocess_webform_confirmation(&$variables) {
+function dsvoboda_theme_preprocess_webform_confirmation(&$variables) {
 	$variables['custom_submission_data'] = $variables['webform_submission']->getData();
 }
 
 /**
  * Implements hook_preprocess_HOOK() for "paragraph".
  */
-function bridges_preprocess_paragraph(&$variables) {
+function dsvoboda_theme_preprocess_paragraph(&$variables) {
 	$variables['delta'] = NULL;
 	foreach ($variables['paragraph']->getParentEntity()->field_content->getValue() as $delta => $item) {
 		if ($item['target_id'] === $variables['paragraph']->id()) {
